@@ -21,7 +21,6 @@
       font-family: 'Newsreader', serif;
       font-style: italic;
     }
-    /* Subtle radial glow background */
     .radial-bg {
       background: radial-gradient(circle at 50% 0%, #171b26 0%, #090a0f 70%, #050608 100%);
     }
@@ -50,118 +49,262 @@
 
     <!-- Right: External Links -->
     <div class="flex items-center gap-4">
-      <a href="https://linkedin.com" target="_blank" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
-        LinkedIn <span class="text-[10px] text-neutral-600">↗</span>
+      <a href="https://github.com/ariffladida-works" target="_blank" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
+        GitHub <span class="text-[10px] text-neutral-600">↗</span>
       </a>
       <a href="mailto:ariffhakimiazani@gmail.com" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
-        Resume <span class="text-[10px] text-neutral-600">↗</span>
+        Email <span class="text-[10px] text-neutral-600">↗</span>
       </a>
     </div>
   </header>
 
-  <!-- Main Hero Layout -->
+  <!-- Main Content Container -->
   <main class="max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-24">
 
-    <!-- Big Editorial Headline -->
-    <section class="max-w-3xl">
-      <h1 class="text-3xl sm:text-5xl md:text-[54px] leading-[1.15] font-normal tracking-tight text-neutral-400">
-        I’m passionate about <span class="text-white">digitizing operations</span> and creating systems that 
-        <span class="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500 pr-1">empower decisions.</span>
-      </h1>
-    </section>
-
-    <!-- Grid / Cards Layout (Mirrors the photo alignment) -->
-    <section class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <!-- ==================== VIEW 1: WORK ==================== -->
+    <div id="viewWork" class="hidden transition-all duration-300">
       
-      <!-- Left Major Card (Portrait / Feature Item) -->
-      <div class="md:col-span-6 space-y-4">
-        <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
-          
-          <!-- Replace image URL with your actual portrait or dashboard preview -->
-          <div class="aspect-[4/5] w-full bg-neutral-900 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" 
-              alt="Portrait or Visual" 
-              class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition duration-700 opacity-80"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
-          </div>
+      <!-- Big Editorial Headline -->
+      <section class="max-w-3xl">
+        <h1 class="text-3xl sm:text-5xl md:text-[54px] leading-[1.15] font-normal tracking-tight text-neutral-400">
+          I’m passionate about <span class="text-white">digitizing operations</span> and creating systems that 
+          <span class="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500 pr-1">empower decisions.</span>
+        </h1>
+      </section>
 
-          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-            <div>
-              <p class="text-xs font-mono uppercase text-teal-400/90 tracking-widest">Focus</p>
-              <h3 class="text-lg text-white font-medium mt-0.5">CEO's Office & Risk Management Unit</h3>
-            </div>
-            <span class="text-xs text-neutral-500 font-mono">2025—2026</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Narrative + Secondary Card -->
-      <div class="md:col-span-6 space-y-10 md:pt-12">
+      <!-- Work Cards Layout -->
+      <section class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
-        <!-- Short Narrative Text -->
-        <div class="max-w-md space-y-3">
-          <p class="text-sm md:text-base text-neutral-400 leading-relaxed font-light">
-            This is my space — detailing enterprise solutions, Power BI performance dashboards, and digital workflows built across corporate environments.
-          </p>
-          <div class="flex items-center gap-2 pt-1 text-xs text-neutral-500 font-mono">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            Golden Pharos Berhad • Terengganu, MY
-          </div>
-        </div>
+        <!-- Left Card -->
+        <div class="md:col-span-6 space-y-4">
+          <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
+            <div class="aspect-[4/5] w-full bg-neutral-900 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+                alt="Executive Dashboards" 
+                class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition duration-700 opacity-80"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
+            </div>
 
-        <!-- Secondary Card (Landscape / System Snapshot) -->
-        <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
-          <div class="aspect-[4/3] w-full bg-neutral-900 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
-              alt="Data Visualization" 
-              class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent"></div>
-          </div>
-
-          <div class="p-6">
-            <div class="flex justify-between items-start">
+            <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
               <div>
-                <h4 class="text-base text-white font-medium">Executive KPI & Risk Intelligence</h4>
-                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">
-                  Consolidated tracking architecture engineered with Power Platform, SharePoint, and Power BI.
-                </p>
+                <p class="text-xs font-mono uppercase text-teal-400/90 tracking-widest">Enterprise Project</p>
+                <h3 class="text-lg text-white font-medium mt-0.5">Corporate KPI & Risk Monitoring</h3>
               </div>
-              <span class="text-xs text-neutral-600 font-mono">01</span>
+              <span class="text-xs text-neutral-500 font-mono">2026</span>
             </div>
           </div>
         </div>
 
-      </div>
+        <!-- Right Column -->
+        <div class="md:col-span-6 space-y-10 md:pt-12">
+          <div class="max-w-md space-y-3">
+            <p class="text-sm md:text-base text-neutral-400 leading-relaxed font-light">
+              Designing internal enterprise systems, automated data entry interfaces, and executive Power BI dashboards.
+            </p>
+            <div class="flex items-center gap-2 pt-1 text-xs text-neutral-500 font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Golden Pharos Berhad • CEO's Office
+            </div>
+          </div>
 
-    </section>
+          <!-- Secondary Card -->
+          <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
+            <div class="aspect-[4/3] w-full bg-neutral-900 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                alt="Workflow Digitalization" 
+                class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent"></div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="text-base text-white font-medium">Digital Workflow & Automation</h4>
+                  <p class="text-xs text-neutral-400 mt-1 leading-relaxed">
+                    Integrated systems leveraging Power Apps, SharePoint List architecture, and automated notification pipelines.
+                  </p>
+                </div>
+                <span class="text-xs text-neutral-600 font-mono">01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+
+    <!-- ==================== VIEW 2: INFO (ABOUT ME) ==================== -->
+    <div id="viewInfo" class="space-y-20 transition-all duration-300">
+      
+      <!-- Intro / Bio Headline -->
+      <section class="max-w-3xl space-y-6">
+        <h1 class="text-3xl sm:text-5xl md:text-[52px] leading-[1.18] font-normal tracking-tight text-neutral-400">
+          I'm <span class="text-white">Ariff Hakimi</span> — a Computer Science graduate blending 
+          <span class="font-serif-italic text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500">data solutions</span> with digital system development.
+        </h1>
+        
+        <p class="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+          Currently serving as a <strong class="text-neutral-200 font-normal">Management Trainee</strong> attached to the <strong class="text-neutral-200 font-normal">CEO's Office & Risk Management Unit</strong> at Golden Pharos Berhad. I specialize in transforming manual, paper-based organizational workflows into clean automated platforms and translating complex operational data into actionable executive insights.
+        </p>
+      </section>
+
+      <!-- Details Grid: Education & Focus Areas -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-900 pt-16">
+        
+        <!-- Left: Academic Background -->
+        <div class="md:col-span-5 space-y-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">Education & Background</p>
+          <h2 class="text-xl text-white font-medium">Academic Foundation in Computing</h2>
+          <p class="text-sm text-neutral-400 leading-relaxed font-light">
+            Trained in computer science with an emphasis on interactive media, system architecture, database modeling, and applied computing technologies.
+          </p>
+        </div>
+
+        <!-- Right: Degree & Diploma List -->
+        <div class="md:col-span-7 space-y-8">
+          
+          <!-- Bachelor Degree -->
+          <div class="p-6 rounded-[22px] border border-neutral-800/80 bg-neutral-900/30 space-y-2">
+            <div class="flex justify-between items-baseline">
+              <span class="text-xs font-mono text-teal-400">2023 — 2026</span>
+              <span class="text-xs text-neutral-500 font-mono">Degree</span>
+            </div>
+            <h3 class="text-base text-white font-medium">
+              Bachelor of Computer Science (Graphics & Multimedia Technology)
+            </h3>
+            <p class="text-xs text-neutral-400 font-mono">
+              Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
+            </p>
+            <p class="text-xs text-neutral-400 pt-2 leading-relaxed font-light">
+              Focused on interactive multimedia systems, augmented reality (AR/VR prototyping), visual computing, and software development methodologies.
+            </p>
+          </div>
+
+          <!-- Diploma -->
+          <div class="p-6 rounded-[22px] border border-neutral-800/80 bg-neutral-900/30 space-y-2">
+            <div class="flex justify-between items-baseline">
+              <span class="text-xs font-mono text-neutral-400">2020 — 2023</span>
+              <span class="text-xs text-neutral-500 font-mono">Diploma</span>
+            </div>
+            <h3 class="text-base text-white font-medium">
+              Diploma in Computer Science
+            </h3>
+            <p class="text-xs text-neutral-400 font-mono">
+              Universiti Malaysia Pahang (UMP)
+            </p>
+            <p class="text-xs text-neutral-400 pt-2 leading-relaxed font-light">
+              Core foundation in programming logic, relational databases, web development (PHP, JavaScript, SQL), and computer networks.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Details Grid: Professional Practice & Skills -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-900 pt-16">
+        
+        <div class="md:col-span-5 space-y-4">
+          <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">Core Areas</p>
+          <h2 class="text-xl text-white font-medium">What I Do Day-to-Day</h2>
+          <p class="text-sm text-neutral-400 leading-relaxed font-light">
+            Combining business unit exposure with technical programming to build practical enterprise solutions.
+          </p>
+        </div>
+
+        <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-5 rounded-2xl border border-neutral-800/70 bg-neutral-900/20 space-y-1.5">
+            <h4 class="text-sm text-white font-medium">Business Intelligence</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Microsoft Power BI (DAX, Modeling), KRI Monitoring, and Executive Performance Reporting.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl border border-neutral-800/70 bg-neutral-900/20 space-y-1.5">
+            <h4 class="text-sm text-white font-medium">Low-Code Digitalization</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Microsoft Power Apps, Power Automate workflows, and SharePoint database architecture.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl border border-neutral-800/70 bg-neutral-900/20 space-y-1.5">
+            <h4 class="text-sm text-white font-medium">Web & Systems</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Full-stack development using Laravel, MySQL, Bootstrap, and JavaScript fundamentals.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl border border-neutral-800/70 bg-neutral-900/20 space-y-1.5">
+            <h4 class="text-sm text-white font-medium">Governance & Risk</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light">
+              Corporate risk registers, operational risk ratings, and cross-departmental coordination.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Contact Banner -->
+      <section class="border-t border-neutral-900 pt-16 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+        <div>
+          <h3 class="text-lg text-white font-medium">Let's Connect</h3>
+          <p class="text-xs text-neutral-400 mt-0.5 font-light">Feel free to reach out for collaborations or opportunities.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="mailto:ariffhakimiazani@gmail.com" class="px-4 py-2 rounded-xl bg-neutral-100 hover:bg-white text-neutral-950 text-xs font-medium transition shadow-sm">
+            ariffhakimiazani@gmail.com
+          </a>
+          <a href="https://wa.me/601111971931" target="_blank" class="px-4 py-2 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 text-xs text-neutral-300 transition">
+            WhatsApp
+          </a>
+        </div>
+      </section>
+
+    </div>
 
     <!-- Footer -->
     <footer class="mt-32 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-600 gap-4">
       <p>© 2026 Ariff Hakimi Azani</p>
       <div class="flex gap-6 font-mono text-[11px]">
-        <span>AR/VR & TECH</span>
-        <span>POWER PLATFORM</span>
-        <span>LARAVEL</span>
+        <span>UMPSA</span>
+        <span>CEO'S OFFICE & RISK</span>
+        <span>MALAYSIA</span>
       </div>
     </footer>
 
   </main>
 
+  <!-- Interactive Tab Switcher Script -->
   <script>
     function switchTab(tab) {
-      const workBtn = document.getElementById('tabWork');
-      const infoBtn = document.getElementById('tabInfo');
+      const tabWork = document.getElementById('tabWork');
+      const tabInfo = document.getElementById('tabInfo');
+      const viewWork = document.getElementById('viewWork');
+      const viewInfo = document.getElementById('viewInfo');
 
       if (tab === 'work') {
-        workBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
-        infoBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+        // Activate Work Button
+        tabWork.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
+        tabInfo.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+        
+        // Show Work, Hide Info
+        viewWork.classList.remove('hidden');
+        viewInfo.classList.add('hidden');
       } else {
-        infoBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
-        workBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+        // Activate Info Button
+        tabInfo.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
+        tabWork.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+        
+        // Show Info, Hide Work
+        viewInfo.classList.remove('hidden');
+        viewWork.classList.add('hidden');
       }
     }
   </script>
