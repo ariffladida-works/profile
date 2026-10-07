@@ -31,7 +31,7 @@
       border: 1px solid rgba(255, 255, 255, 0.07);
     }
     .glass-card:hover {
-      border-color: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.16);
     }
   </style>
 </head>
@@ -40,7 +40,7 @@
   <!-- Top Navigation Bar -->
   <header class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex items-center justify-between text-xs tracking-tight">
     
-    <!-- Left: Identity (Enlarged & Cleaned) -->
+    <!-- Left: Identity -->
     <div class="leading-none">
       <a href="#" class="text-white text-base md:text-lg font-semibold tracking-tight hover:text-neutral-200 transition">
         Ariff Hakimi
@@ -49,15 +49,15 @@
 
     <!-- Center: Floating Pill Switcher -->
     <nav class="absolute left-1/2 -translate-x-1/2 backdrop-blur-md bg-neutral-900/80 border border-neutral-800/80 px-1 py-1 rounded-full flex items-center shadow-2xl">
-      <button onclick="switchTab('work')" id="tabWork" class="px-4 py-1.5 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white">
+      <button onclick="switchTab('work')" id="tabWork" class="px-4 py-1.5 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm">
         Work
       </button>
-      <button onclick="switchTab('info')" id="tabInfo" class="px-4 py-1.5 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm">
+      <button onclick="switchTab('info')" id="tabInfo" class="px-4 py-1.5 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white">
         Info
       </button>
     </nav>
 
-    <!-- Right: Quick Contact & Links -->
+    <!-- Right: External Links -->
     <div class="flex items-center gap-4">
       <a href="https://github.com/ariffladida-works" target="_blank" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
         GitHub <span class="text-[10px] text-neutral-600">↗</span>
@@ -72,103 +72,208 @@
   <main class="max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-28">
 
     <!-- ========================================== -->
-    <!-- VIEW 1: WORK (PROJECTS & ARCHITECTURE)     -->
+    <!-- VIEW 1: WORK (TIMELINE PROJECTS)           -->
     <!-- ========================================== -->
-    <div id="viewWork" class="hidden transition-all duration-300 space-y-24">
+    <div id="viewWork" class="space-y-16 transition-all duration-300">
+      
       
       <!-- Headline -->
-      <section class="max-w-3xl">
+      <section class="max-w-3xl space-y-4">
         <h1 class="text-3xl sm:text-5xl md:text-[54px] leading-[1.14] font-normal tracking-tight text-neutral-400">
-          I’m passionate about <span class="text-white">digitizing operations</span> and creating systems that 
-          <span class="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500 pr-1">empower decisions.</span>
+          A showcase of <span class="text-white">solo projects</span> engineered across my 
+          <span class="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500 pr-1">studies and career.</span>
         </h1>
+        <p class="text-sm md:text-base text-neutral-400 font-light leading-relaxed max-w-xl">
+          From award-winning university applications to enterprise operational tools built for corporate governance.
+        </p>
       </section>
 
-      <!-- Featured Projects Grid -->
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left Feature Card: Enterprise Systems -->
-        <div class="md:col-span-7 space-y-4">
-          <div class="group relative rounded-[28px] overflow-hidden glass-card shadow-2xl transition duration-500">
-            <div class="p-8 md:p-10 space-y-6">
-              
+      <!-- Timeline Projects Grid -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-neutral-900 pb-3">
+          <span class="text-xs font-mono uppercase tracking-widest text-teal-400">Project Timeline</span>
+          <span class="text-xs font-mono text-neutral-500">2022 — Present</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 1. E-RCSA (Latest) -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5 relative overflow-hidden">
+            <div class="space-y-3">
               <div class="flex justify-between items-start">
-                <span class="text-[11px] font-mono uppercase tracking-widest text-teal-400 bg-teal-950/60 border border-teal-800/40 px-3 py-1 rounded-full">
-                  Full-Stack Architecture
+                <span class="text-[11px] font-mono uppercase tracking-wider text-teal-400 bg-teal-950/60 border border-teal-800/40 px-2.5 py-0.5 rounded-full">
+                  Latest • Risk & Governance
                 </span>
-                <span class="text-xs font-mono text-neutral-500">2025 — 2026</span>
+                <span class="text-xs font-mono text-neutral-400">2026</span>
               </div>
-
-              <div>
-                <h3 class="text-2xl text-white font-medium tracking-tight">Enterprise Risk & Management Platforms</h3>
-                <p class="text-sm text-neutral-400 mt-2 leading-relaxed font-light">
-                  Bespoke internal systems designed to replace cumbersome spreadsheets. Built with robust relational schemas, secure role-based access control, and dynamic client-side state handling.
-                </p>
-              </div>
-
-              <!-- Tech Highlights Box -->
-              <div class="grid grid-cols-2 gap-3 pt-2">
-                <div class="p-3.5 rounded-xl bg-neutral-900/60 border border-neutral-800/70 text-xs">
-                  <div class="text-neutral-200 font-medium">Backend & APIs</div>
-                  <div class="text-neutral-400 text-[11px] mt-0.5">Laravel 11, REST Endpoints, MySQL, Filament Admin</div>
-                </div>
-                <div class="p-3.5 rounded-xl bg-neutral-900/60 border border-neutral-800/70 text-xs">
-                  <div class="text-neutral-200 font-medium">Modern Frontend</div>
-                  <div class="text-neutral-400 text-[11px] mt-0.5">Vue 3 / Inertia, Vite, Axios Client, Tailwind CSS</div>
-                </div>
-              </div>
-
-              <!-- Project Modules Details -->
-              <div class="space-y-2 pt-2 border-t border-neutral-800/60 text-xs text-neutral-400">
-                <div class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                  <span><strong>Costing & Licensing Engine:</strong> Automated calculations and operational licensing tracking logic.</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
-                  <span><strong>KRI Governance Portal:</strong> Key Risk Indicator thresholds with auto-flagging risk registers.</span>
-                </div>
-              </div>
-
+              <h3 class="text-xl text-white font-medium">E-RCSA</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Risk and Control Self-Assessment platform facilitating operational risk profiling, assessment evaluation workflows, and dynamic risk matrix categorization with decoupled API architecture.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-teal-300">Laravel (Backend API)</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">React</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Tailwind CSS</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">MySQL</span>
             </div>
           </div>
+
+          <!-- 2. SOPNexus -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  Corporate Portal
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2026</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">SOPNexus</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Centralized standard operating procedure governance hub built for Golden Pharos Berhad and its group subsidiaries, standardizing compliance documentation.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Laravel Breeze</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">PHP</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">HTML</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">CSS</span>
+            </div>
+          </div>
+
+          <!-- 3. Operational Costing System -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  Financial Tool
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2026</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">Operational Costing System</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Full-stack costing calculation engine with administrative panel management, managed relational database hosting, and live cloud hosting architecture.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">PHP</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Filament</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Aiven.io (MySQL)</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Render</span>
+            </div>
+          </div>
+
+          <!-- 4. E-KUP (Licensing System) -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  Subsidiary KPKKT
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2026</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">E-KUP (Licensing System)</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Digital permit and licensing application streamlining logging operations and concession compliance verification through automated low-code workflows.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power Apps</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power Automate</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">SharePoint Lists</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power BI</span>
+            </div>
+          </div>
+
+          <!-- 5. CEO KPI Intelligence -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  Executive BI
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2026</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">CEO KPI Intelligence</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Comprehensive executive dashboard built with custom DAX measures for executive committee oversight, departmental milestone review, and strategic metrics.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power BI</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">DAX</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Data Modeling</span>
+            </div>
+          </div>
+
+          <!-- 6. HOD Performance & Action Portal -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  CEO's Office
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2025 — 2026</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">HOD Performance & Action Portal</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Departmental action plan submission portal replacing spreadsheet updates with structured digital inputs, automated status alerts, and BI reporting.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power Apps</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power Automate</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">SharePoint Lists</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Power BI</span>
+            </div>
+          </div>
+
+          <!-- 7. ARTI: PC Anatomy -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
+                  Final Year Project
+                </span>
+                <span class="text-xs font-mono text-neutral-400">UMPSA</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">ARTI: PC Anatomy</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Augmented Reality Teaching Interface facilitating interactive computer hardware assembly education through real-time 3D model decomposition.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Unity</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">C#</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">3D Interaction</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">AR</span>
+            </div>
+          </div>
+
+          <!-- 8. MyNota (Earliest / 2022) -->
+          <div class="p-7 rounded-[26px] glass-card flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-amber-400/90 bg-amber-950/40 border border-amber-800/30 px-2.5 py-0.5 rounded-full">
+                  🥈 Silver Medal • FYPro 2022
+                </span>
+                <span class="text-xs font-mono text-neutral-400">2022</span>
+              </div>
+              <h3 class="text-xl text-white font-medium">MyNota — Note Taking App</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                Mobile note application featuring authentication and real-time cloud data synchronization. Awarded Silver Medal at Faculty of Computing UMP.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-800/60">
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Java</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Android Studio</span>
+              <span class="px-2 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-neutral-300">Firebase</span>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Right Side: Low-Code & BI Ecosystem -->
-        <div class="md:col-span-5 space-y-8">
-          
-          <div class="space-y-3">
-            <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">Corporate Ecosystem</p>
-            <h4 class="text-lg text-white font-medium">Power Platform & BI Intelligence</h4>
-            <p class="text-xs text-neutral-400 leading-relaxed font-light">
-              Rapid internal deployment for department heads and executive reporting within the CEO's Office.
-            </p>
-          </div>
-
-          <!-- Sub Card 1: BI -->
-          <div class="p-6 rounded-[24px] glass-card space-y-3">
-            <div class="flex justify-between items-center text-xs">
-              <span class="text-white font-medium">Executive Power BI Suite</span>
-              <span class="text-neutral-500 font-mono text-[11px]">DAX & Modeling</span>
-            </div>
-            <p class="text-xs text-neutral-400 leading-relaxed font-light">
-              Interactive multi-tier dashboards tracking action plan milestones, departmental deliverables, and operational performance matrices.
-            </p>
-          </div>
-
-          <!-- Sub Card 2: Low-Code Flows -->
-          <div class="p-6 rounded-[24px] glass-card space-y-3">
-            <div class="flex justify-between items-center text-xs">
-              <span class="text-white font-medium">Power Apps & Automate Pipelines</span>
-              <span class="text-neutral-500 font-mono text-[11px]">SharePoint Backend</span>
-            </div>
-            <p class="text-xs text-neutral-400 leading-relaxed font-light">
-              Tailored input forms removing manual paperwork. Real-time data sync into SharePoint lists with instant approval email triggers.
-            </p>
-          </div>
-
-        </div>
-
       </section>
 
     </div>
@@ -177,9 +282,9 @@
     <!-- ========================================== -->
     <!-- VIEW 2: INFO (ABOUT ME & SYSTEM ARCHITECTURE) -->
     <!-- ========================================== -->
-    <div id="viewInfo" class="space-y-20 transition-all duration-300">
+    <div id="viewInfo" class="hidden space-y-20 transition-all duration-300">
       
-      <!-- Intro / Bio Headline (Updated Option 1) -->
+      <!-- Intro / Bio Headline (Option 1) -->
       <section class="max-w-3xl space-y-6">
         <h1 class="text-3xl sm:text-5xl md:text-[52px] leading-[1.18] font-normal tracking-tight text-neutral-400">
           I'm <span class="text-white">Ariff Hakimi</span> — a Computer Science graduate building scalable web applications and crafting modern 
@@ -187,7 +292,7 @@
         </h1>
         
         <p class="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
-          Currently serving as a <strong class="text-neutral-200 font-normal">Management Trainee</strong> across the <strong class="text-neutral-200 font-normal">CEO's Office & Risk Management Unit</strong> at Golden Pharos Berhad. Transitioning my day-to-day exposure in enterprise operations into building robust software — from normalized MySQL schemas and Laravel REST APIs to dynamic Vue.js frontends.
+          Currently serving as a <strong class="text-neutral-200 font-normal">Management Trainee</strong> across the <strong class="text-neutral-200 font-normal">CEO's Office & Risk Management Unit</strong> at Golden Pharos Berhad. Transitioning my day-to-day exposure in enterprise operations into building robust software — from normalized MySQL schemas and Laravel REST APIs to dynamic Vue.js and React frontends.
         </p>
       </section>
 
@@ -211,10 +316,11 @@
               <span class="text-[11px] font-mono text-teal-400">Full-Stack</span>
             </div>
             <p class="text-xs text-neutral-300 leading-relaxed font-light">
-              Crafting modular MVC web solutions. Experience configuring <strong>Vite</strong> build pipelines, single-page application interactivity using <strong>Vue.js & Inertia.js</strong>, and robust communication between frontend and backend via <strong>Axios</strong> client wrappers with centralized error handling.
+              Crafting modular MVC web solutions. Experience configuring <strong>Vite</strong> build pipelines, single-page application interactivity using <strong>Vue.js, Inertia.js & React</strong>, and robust communication between frontend and backend via <strong>Axios</strong> client wrappers with centralized error handling.
             </p>
             <div class="flex flex-wrap gap-1.5 pt-1">
               <span class="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-400">Laravel 11</span>
+              <span class="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-400">React / TypeScript</span>
               <span class="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-400">Vue.js / Inertia</span>
               <span class="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-400">Axios HTTP</span>
               <span class="px-2.5 py-1 rounded-md bg-neutral-900 border border-neutral-800 text-[11px] font-mono text-neutral-400">Filament PHP</span>
@@ -375,7 +481,7 @@
     <footer class="mt-32 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-600 gap-4">
       <p>© 2026 Ariff Hakimi Azani</p>
       <div class="flex gap-6 font-mono text-[11px]">
-        <span>LARAVEL & VUE</span>
+        <span>REACT & LARAVEL</span>
         <span>POWER PLATFORM</span>
         <span>POWER BI</span>
         <span>MALAYSIA</span>
