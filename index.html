@@ -3,265 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariff Hakimi | Management Trainee (CEO's Office & Risk Management)</title>
-  
+  <title>Ariff Hakimi — Management Trainee</title>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
   
+  <!-- Google Fonts: Inter & Newsreader (Serif Italic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
   <style>
-    @keyframes pulse-subtle {
-      0%, 100% { opacity: 0.12; transform: scale(1); }
-      50% { opacity: 0.22; transform: scale(1.05); }
+    body {
+      font-family: 'Inter', sans-serif;
     }
-    .ambient-glow {
-      animation: pulse-subtle 8s infinite ease-in-out;
+    .font-serif-italic {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+    }
+    /* Subtle radial glow background */
+    .radial-bg {
+      background: radial-gradient(circle at 50% 0%, #171b26 0%, #090a0f 70%, #050608 100%);
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans selection:bg-teal-500 selection:text-white relative overflow-x-hidden min-h-screen">
+<body class="radial-bg text-neutral-300 min-h-screen selection:bg-neutral-800 selection:text-white antialiased">
 
-  <!-- Background Ambient Glow -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none ambient-glow"></div>
-  <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none ambient-glow"></div>
+  <!-- Top Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex items-center justify-between text-xs tracking-tight">
+    
+    <!-- Left: Identity -->
+    <div class="leading-snug">
+      <div class="text-white font-medium">Ariff Hakimi</div>
+      <div class="text-neutral-500">Management Trainee</div>
+    </div>
 
-  <!-- Main Container -->
-  <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 relative z-10 space-y-16">
+    <!-- Center: Floating Pill Switcher -->
+    <nav class="absolute left-1/2 -translate-x-1/2 backdrop-blur-md bg-neutral-900/70 border border-neutral-800/80 px-1 py-1 rounded-full flex items-center shadow-2xl">
+      <button onclick="switchTab('work')" id="tabWork" class="px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white">
+        Work
+      </button>
+      <button onclick="switchTab('info')" id="tabInfo" class="px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm">
+        Info
+      </button>
+    </nav>
 
-    <!-- Hero / Header Section -->
-    <header class="space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-950/40 text-teal-400 text-xs font-medium tracking-wide">
-        <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
-        Open for Career Opportunities
-      </div>
+    <!-- Right: External Links -->
+    <div class="flex items-center gap-4">
+      <a href="https://linkedin.com" target="_blank" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
+        LinkedIn <span class="text-[10px] text-neutral-600">↗</span>
+      </a>
+      <a href="mailto:ariffhakimiazani@gmail.com" class="text-neutral-400 hover:text-white transition flex items-center gap-0.5">
+        Resume <span class="text-[10px] text-neutral-600">↗</span>
+      </a>
+    </div>
+  </header>
 
-      <div class="space-y-2">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-          Ariff Hakimi Azani
-        </h1>
-        <p class="text-lg md:text-xl text-teal-400 font-medium">
-          Management Trainee • CEO's Office & Risk Management Unit
-        </p>
-      </div>
+  <!-- Main Hero Layout -->
+  <main class="max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-24">
 
-      <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl">
-        Computer Science graduate specializing in enterprise workflow digitalization, corporate performance monitoring, and risk analytics. Experienced in building automated business systems using <span class="text-slate-200">Power Platform</span>, designing executive dashboards in <span class="text-slate-200">Power BI (DAX)</span>, and developing web applications with <span class="text-slate-200">Laravel & MySQL</span>.
-      </p>
-
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center gap-3 pt-2">
-        <a href="mailto:ariffhakimiazani@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-sm transition transform hover:-translate-y-0.5 shadow-lg shadow-teal-500/20">
-          <i data-lucide="mail" class="w-4 h-4"></i>
-          Get in Touch
-        </a>
-
-        <!-- Interactive Copy Button -->
-        <button onclick="copyEmail()" id="copyBtn" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-medium text-sm transition">
-          <i data-lucide="copy" class="w-4 h-4" id="copyIcon"></i>
-          <span id="copyText">Copy Email</span>
-        </button>
-
-        <a href="https://github.com/ariffladida-works" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-medium text-sm transition">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          GitHub
-        </a>
-
-        <a href="https://wa.me/601111971931" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-medium text-sm transition">
-          <i data-lucide="message-square" class="w-4 h-4"></i>
-          WhatsApp
-        </a>
-      </div>
-    </header>
-
-    <!-- Highlights -->
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="p-4 rounded-xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
-        <div class="text-2xl md:text-3xl font-bold text-white">Full-Stack</div>
-        <div class="text-xs text-slate-400 mt-1">Laravel & Web Apps</div>
-      </div>
-      <div class="p-4 rounded-xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
-        <div class="text-2xl md:text-3xl font-bold text-white">Power BI</div>
-        <div class="text-xs text-slate-400 mt-1">DAX, KRIs & Dashboards</div>
-      </div>
-      <div class="p-4 rounded-xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
-        <div class="text-2xl md:text-3xl font-bold text-white">Low-Code</div>
-        <div class="text-xs text-slate-400 mt-1">Power Apps & Automate</div>
-      </div>
-      <div class="p-4 rounded-xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
-        <div class="text-2xl md:text-3xl font-bold text-white">B.Sc. Degree</div>
-        <div class="text-xs text-slate-400 mt-1">Computer Science (UMPSA)</div>
-      </div>
+    <!-- Big Editorial Headline -->
+    <section class="max-w-3xl">
+      <h1 class="text-3xl sm:text-5xl md:text-[54px] leading-[1.15] font-normal tracking-tight text-neutral-400">
+        I’m passionate about <span class="text-white">digitizing operations</span> and creating systems that 
+        <span class="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 via-neutral-300 to-neutral-500 pr-1">empower decisions.</span>
+      </h1>
     </section>
 
-    <!-- Interactive Technical Skills -->
-    <section class="space-y-4">
-      <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-        <h2 class="text-xl font-bold text-white flex items-center gap-2">
-          <i data-lucide="cpu" class="w-5 h-5 text-teal-400"></i> Technical Expertise
-        </h2>
-        <!-- Filter Buttons -->
-        <div class="flex gap-1.5 text-xs">
-          <button onclick="filterSkills('all')" class="skill-btn px-2.5 py-1 rounded-md bg-teal-500/20 text-teal-300 border border-teal-500/40">All</button>
-          <button onclick="filterSkills('bi')" class="skill-btn px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-white border border-slate-800">BI & Data</button>
-          <button onclick="filterSkills('dev')" class="skill-btn px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Development</button>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap gap-2 pt-1" id="skillsContainer">
-        <!-- BI & Data -->
-        <span class="skill-tag bi px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-teal-300">Microsoft Power BI (DAX & Data Modeling)</span>
-        <span class="skill-tag bi px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-teal-300">Advanced Excel (Power Query, Pivot Tables)</span>
-        <span class="skill-tag bi px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-teal-300">Key Risk Indicators (KRI) Monitoring</span>
-        <span class="skill-tag bi px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-teal-300">Data Cleansing, Structuring & Validation</span>
-
-        <!-- Dev & Architecture -->
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">Laravel / PHP</span>
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">Power Apps & Power Automate</span>
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">SharePoint Lists Architecture</span>
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">MySQL & Relational Databases</span>
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">HTML5 / CSS / Bootstrap / JavaScript</span>
-        <span class="skill-tag dev px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 border border-slate-800 text-blue-300">Unity (3D/VR Storyboarding & User Flow)</span>
-      </div>
-    </section>
-
-    <!-- Professional Experience -->
-    <section class="space-y-6">
-      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-slate-800/80 pb-3">
-        <i data-lucide="briefcase" class="w-5 h-5 text-teal-400"></i> Work Experience
-      </h2>
-
-      <div class="relative border-l border-slate-800 ml-3 space-y-8 pl-6">
-        
-        <!-- Golden Pharos Berhad -->
-        <div class="relative group">
-          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-teal-400 border-4 border-slate-950 group-hover:scale-125 transition"></span>
-          <div>
-            <span class="text-xs font-semibold text-teal-400 tracking-wider uppercase">2025 — 2026</span>
-            <h3 class="text-lg font-bold text-white">Golden Pharos Berhad</h3>
-            <p class="text-sm text-slate-300 font-medium">Management Trainee – CEO's Office & Risk Management Unit</p>
-          </div>
-          <ul class="mt-3 space-y-2 text-sm text-slate-400 leading-relaxed list-disc list-inside">
-            <li><strong class="text-slate-200">Executive Dashboards:</strong> Developed central Power BI dashboards to track CEO's Office action items, subsidiary milestones, and departmental KPIs.</li>
-            <li><strong class="text-slate-200">Workflow Digitalization:</strong> Streamlined manual tracking workflows by deploying end-to-end solutions using Power Apps, SharePoint Lists, and automated Power Automate notifications.</li>
-            <li><strong class="text-slate-200">Data Preparation & Governance:</strong> Managed data cleansing, structuring, and validation pipelines across departments for high-level management reporting.</li>
-            <li><strong class="text-slate-200">Risk Assessment:</strong> Monitored Key Risk Indicators (KRIs), evaluated operational risk profiles, and assisted in corporate risk register governance.</li>
-          </ul>
-        </div>
-
-        <!-- UMP Freelance -->
-        <div class="relative group">
-          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600 border-4 border-slate-950 group-hover:bg-teal-400 group-hover:scale-125 transition"></span>
-          <div>
-            <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">2023 — 2025</span>
-            <h3 class="text-lg font-bold text-white">Universiti Malaysia Pahang Al-Sultan Abdullah</h3>
-            <p class="text-sm text-slate-300 font-medium">Freelancer / VR Assistant</p>
-          </div>
-          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
-            Designed interactive storyboard concepts and structured user flows for Virtual Reality (VR) educational modules, along with technical system documentation.
-          </p>
-        </div>
-
-        <!-- LTAWNT -->
-        <div class="relative group">
-          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600 border-4 border-slate-950 group-hover:bg-teal-400 group-hover:scale-125 transition"></span>
-          <div>
-            <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">2022 — 2023</span>
-            <h3 class="text-lg font-bold text-white">Lembaga Tabung Amanah Warisan Negeri Terengganu</h3>
-            <p class="text-sm text-slate-300 font-medium">Front-End Developer Intern</p>
-          </div>
-          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
-            Developed responsive web user interfaces for official portals using HTML, CSS, and JavaScript, while assisting with hardware, software, and network troubleshooting.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Education & Achievements -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Grid / Cards Layout (Mirrors the photo alignment) -->
+    <section class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
       
-      <!-- Education -->
-      <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/30 space-y-4">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="graduation-cap" class="w-5 h-5 text-teal-400"></i> Education
-        </h3>
-        <div class="space-y-3 text-sm">
-          <div>
-            <div class="font-semibold text-white">Bachelor of Computer Science (Graphics & Multimedia Technology)</div>
-            <div class="text-slate-400 text-xs">Universiti Malaysia Pahang Al-Sultan Abdullah (2023 — 2026)</div>
+      <!-- Left Major Card (Portrait / Feature Item) -->
+      <div class="md:col-span-6 space-y-4">
+        <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
+          
+          <!-- Replace image URL with your actual portrait or dashboard preview -->
+          <div class="aspect-[4/5] w-full bg-neutral-900 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" 
+              alt="Portrait or Visual" 
+              class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition duration-700 opacity-80"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
           </div>
-          <div class="border-t border-slate-800/80 pt-2">
-            <div class="font-semibold text-white">Diploma in Computer Science</div>
-            <div class="text-slate-400 text-xs">Universiti Malaysia Pahang (2020 — 2023)</div>
+
+          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+            <div>
+              <p class="text-xs font-mono uppercase text-teal-400/90 tracking-widest">Focus</p>
+              <h3 class="text-lg text-white font-medium mt-0.5">CEO's Office & Risk Management Unit</h3>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">2025—2026</span>
           </div>
         </div>
       </div>
 
-      <!-- Extracurricular -->
-      <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/30 space-y-4">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="award" class="w-5 h-5 text-teal-400"></i> Leadership & Activities
-        </h3>
-        <ul class="space-y-2 text-xs text-slate-300 leading-relaxed list-disc list-inside">
-          <li><span class="text-teal-300 font-medium">Silver Medalist</span> at FYPro Carnival 2022, Faculty of Computing, UMP.</li>
-          <li>Protocol Committee for Minggu Cakna Siber 2024, UMPSA.</li>
-          <li>VR Demonstration Assistant, Faculty of Computing, UMPSA.</li>
-          <li>Sub-committee member for "Jom Masuk U" 2024 Open Day (East Coast Zone).</li>
-        </ul>
+      <!-- Right Column: Narrative + Secondary Card -->
+      <div class="md:col-span-6 space-y-10 md:pt-12">
+        
+        <!-- Short Narrative Text -->
+        <div class="max-w-md space-y-3">
+          <p class="text-sm md:text-base text-neutral-400 leading-relaxed font-light">
+            This is my space — detailing enterprise solutions, Power BI performance dashboards, and digital workflows built across corporate environments.
+          </p>
+          <div class="flex items-center gap-2 pt-1 text-xs text-neutral-500 font-mono">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Golden Pharos Berhad • Terengganu, MY
+          </div>
+        </div>
+
+        <!-- Secondary Card (Landscape / System Snapshot) -->
+        <div class="group relative rounded-[28px] overflow-hidden border border-neutral-800/80 bg-neutral-900/50 shadow-2xl transition duration-500 hover:border-neutral-700">
+          <div class="aspect-[4/3] w-full bg-neutral-900 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+              alt="Data Visualization" 
+              class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent"></div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="text-base text-white font-medium">Executive KPI & Risk Intelligence</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">
+                  Consolidated tracking architecture engineered with Power Platform, SharePoint, and Power BI.
+                </p>
+              </div>
+              <span class="text-xs text-neutral-600 font-mono">01</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </section>
 
     <!-- Footer -->
-    <footer class="pt-10 border-t border-slate-800 text-center text-xs text-slate-500 space-y-2">
-      <p>© 2026 Ariff Hakimi Azani. Built with Tailwind CSS & Hosted on GitHub Pages.</p>
-      <p class="text-slate-600">Besut, Terengganu / Kuantan / Kuala Lumpur, Malaysia</p>
+    <footer class="mt-32 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-600 gap-4">
+      <p>© 2026 Ariff Hakimi Azani</p>
+      <div class="flex gap-6 font-mono text-[11px]">
+        <span>AR/VR & TECH</span>
+        <span>POWER PLATFORM</span>
+        <span>LARAVEL</span>
+      </div>
     </footer>
 
   </main>
 
-  <!-- Interactive JavaScript -->
   <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    function switchTab(tab) {
+      const workBtn = document.getElementById('tabWork');
+      const infoBtn = document.getElementById('tabInfo');
 
-    // Copy Email Function
-    function copyEmail() {
-      const email = 'ariffhakimiazani@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        const copyText = document.getElementById('copyText');
-        const copyBtn = document.getElementById('copyBtn');
-        
-        copyText.textContent = 'Copied!';
-        copyBtn.classList.add('border-teal-500', 'text-teal-300');
-        
-        setTimeout(() => {
-          copyText.textContent = 'Copy Email';
-          copyBtn.classList.remove('border-teal-500', 'text-teal-300');
-        }, 2000);
-      });
-    }
-
-    // Filter Skills Function
-    function filterSkills(type) {
-      const tags = document.querySelectorAll('.skill-tag');
-      const buttons = document.querySelectorAll('.skill-btn');
-      
-      buttons.forEach(btn => {
-        btn.className = 'skill-btn px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-white border border-slate-800';
-      });
-      event.target.className = 'skill-btn px-2.5 py-1 rounded-md bg-teal-500/20 text-teal-300 border border-teal-500/40';
-
-      tags.forEach(tag => {
-        if (type === 'all') {
-          tag.classList.remove('hidden');
-        } else if (tag.classList.contains(type)) {
-          tag.classList.remove('hidden');
-        } else {
-          tag.classList.add('hidden');
-        }
-      });
+      if (tab === 'work') {
+        workBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
+        infoBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+      } else {
+        infoBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition bg-neutral-800 text-white shadow-sm";
+        workBtn.className = "px-3.5 py-1 rounded-full text-[11px] font-medium transition text-neutral-400 hover:text-white";
+      }
     }
   </script>
 </body>
