@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariff Hakimi — Developer & Full-Stack Solutions</title>
+  <title>Ariff Hakimi — Systems & Full-Stack Engineer</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fonts: Inter & JetBrains Mono -->
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,7 +20,7 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #0b1114;
+      background-color: #070406;
       color: #94a3b8;
       overflow-x: hidden;
     }
@@ -28,48 +28,48 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* SECTION 1: HERO SPOTLIGHT GLOW */
+    /* SECTION 1: MALWARE RED SPOTLIGHT */
     .hero-bg {
-      background: radial-gradient(circle at 50% 25%, rgba(20, 184, 166, 0.22) 0%, rgba(11, 17, 20, 0.95) 60%, #0b1114 100%);
+      background: radial-gradient(circle at 50% 15%, rgba(255, 0, 60, 0.22) 0%, rgba(10, 4, 6, 0.95) 60%, #070406 100%);
     }
 
-    /* SECTION 2: TOPOGRAPHIC MAP CONTOUR */
+    /* SECTION 2: THREAT RADAR / TOPO LINES (RED CONTOUR) */
     .topo-bg {
-      background-color: #090e11;
+      background-color: #080305;
       background-image: 
-        radial-gradient(ellipse at center, rgba(13, 148, 136, 0.08) 0%, transparent 70%),
-        repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 40px, rgba(45, 212, 191, 0.04) 41px, transparent 42px);
-      border-top: 1px solid rgba(45, 212, 191, 0.12);
-      border-bottom: 1px solid rgba(45, 212, 191, 0.12);
+        radial-gradient(ellipse at center, rgba(255, 0, 60, 0.08) 0%, transparent 70%),
+        repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 40px, rgba(239, 68, 68, 0.05) 41px, transparent 42px);
+      border-top: 1px solid rgba(239, 68, 68, 0.18);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.18);
     }
 
-    /* SECTION 3: CODE MATRIX WATERMARK */
+    /* SECTION 3: EXPLOIT / CODE PAYLOAD MATRIX WATERMARK */
     .code-bg {
-      background-color: #0d1217;
-      background-image: linear-gradient(rgba(13, 18, 23, 0.94), rgba(13, 18, 23, 0.94)),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150"><text x="10" y="25" fill="rgba(45,212,191,0.06)" font-family="monospace" font-size="12">const dev = new FullStackDeveloper();</text><text x="10" y="55" fill="rgba(45,212,191,0.06)" font-family="monospace" font-size="12">await dev.buildScalableSystems(stack);</text><text x="10" y="85" fill="rgba(45,212,191,0.06)" font-family="monospace" font-size="12">return response()->json($insights);</text></svg>');
-      border-bottom: 1px solid rgba(45, 212, 191, 0.12);
+      background-color: #0a0406;
+      background-image: linear-gradient(rgba(10, 4, 6, 0.94), rgba(10, 4, 6, 0.94)),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150"><text x="10" y="25" fill="rgba(255,0,60,0.08)" font-family="monospace" font-size="12">[CRITICAL] RCSA_EXECUTE(payload);</text><text x="10" y="55" fill="rgba(255,0,60,0.08)" font-family="monospace" font-size="12">bypassRiskRegister(threat_level: 0x99);</text><text x="10" y="85" fill="rgba(255,0,60,0.08)" font-family="monospace" font-size="12">return system()->deployCoreEngine();</text></svg>');
+      border-bottom: 1px solid rgba(239, 68, 68, 0.18);
     }
 
-    /* Neon UI Cards */
+    /* Neon Red Cyber Threat Cards */
     .neon-card {
-      background: #141c22;
-      border: 1px solid rgba(45, 212, 191, 0.22);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+      background: #11080a;
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.85);
       transition: all 0.35s ease;
     }
     .neon-card:hover {
-      border-color: rgba(45, 212, 191, 0.55);
-      box-shadow: 0 0 25px rgba(20, 184, 166, 0.2);
+      border-color: rgba(255, 0, 60, 0.7);
+      box-shadow: 0 0 30px rgba(255, 0, 60, 0.25);
       transform: translateY(-3px);
     }
 
-    /* Profile Asymmetric Card Shape */
+    /* Asymmetric Profile Card */
     .profile-card-shape {
       border-radius: 40px 100px 40px 40px;
     }
 
-    /* Circuit Node Line Connector */
+    /* Circuit / Laser Connecting Node */
     .circuit-node {
       display: flex;
       flex-direction: column;
@@ -82,97 +82,102 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: #14b8a6;
-      box-shadow: 0 0 15px #14b8a6, 0 0 30px #14b8a6;
+      background: #ff003c;
+      box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c;
     }
     .circuit-line {
       width: 2px;
       height: 70px;
-      background: linear-gradient(to bottom, #14b8a6, rgba(20, 184, 166, 0.1));
+      background: linear-gradient(to bottom, #ff003c, rgba(255, 0, 60, 0.08));
     }
 
-    /* Pulse Glow */
-    @keyframes cyan-glow {
-      0%, 100% { filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.4)); }
-      50% { filter: drop-shadow(0 0 22px rgba(45, 212, 191, 0.8)); }
+    /* Red Threat Pulse */
+    @keyframes red-threat-glow {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.45)); }
+      50% { filter: drop-shadow(0 0 26px rgba(255, 0, 60, 0.95)); }
     }
     .glow-header {
-      animation: cyan-glow 4s infinite ease-in-out;
+      animation: red-threat-glow 3.5s infinite ease-in-out;
     }
   </style>
 </head>
-<body class="antialiased selection:bg-teal-400 selection:text-black">
+<body class="antialiased selection:bg-red-600 selection:text-white">
 
   <!-- ==================================================== -->
-  <!-- NAVBAR                                               -->
+  <!-- NAVBAR (NON-STICKY, SCROLLS NATURALLY)              -->
   <!-- ==================================================== -->
-  <header class="fixed top-0 left-0 w-full z-50 px-8 py-5 flex justify-between items-center backdrop-blur-md bg-[#0b1114]/70 border-b border-white/5">
+  <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center text-xs font-mono relative z-20">
     <div class="flex items-center gap-2">
-      <span class="text-teal-400 font-mono font-bold text-lg">&lt;c/&gt;</span>
-      <span class="text-white font-bold tracking-tight text-base">AriffHakimi</span>
+      <span class="text-red-500 font-bold text-base">&lt;root/&gt;</span>
+      <span class="text-white font-semibold tracking-wide text-sm">AriffHakimi</span>
     </div>
-    <nav class="flex items-center gap-8 text-sm font-mono">
-      <a href="#about" class="text-neutral-400 hover:text-teal-400 transition">About</a>
-      <a href="#skills" class="text-neutral-400 hover:text-teal-400 transition">Skills</a>
-      <a href="#works" class="text-neutral-400 hover:text-teal-400 transition">Works</a>
-      <a href="mailto:ariffhakimiazani@gmail.com" class="px-5 py-2 rounded-full border border-teal-500/50 bg-teal-500/10 text-teal-300 font-semibold hover:bg-teal-400 hover:text-black transition shadow-[0_0_15px_rgba(20,184,166,0.25)]">
-        Let's Talk
+    
+    <nav class="flex items-center gap-4 sm:gap-8">
+      <div class="hidden sm:flex items-center gap-6 text-neutral-400">
+        <a href="#about" class="hover:text-red-400 transition">About</a>
+        <a href="#skills" class="hover:text-red-400 transition">Skills</a>
+        <a href="#works" class="hover:text-red-400 transition">Works</a>
+      </div>
+      
+      <a href="mailto:ariffhakimiazani@gmail.com" class="px-4 py-1.5 rounded-full border border-red-500/60 bg-red-600/15 text-red-300 font-medium hover:bg-red-600 hover:text-white transition shadow-[0_0_15px_rgba(255,0,60,0.3)]">
+        Initialize Contact
       </a>
     </nav>
   </header>
 
 
   <!-- ==================================================== -->
-  <!-- SECTION 1: HERO (DEVELOPER + PROFILE + STATS)        -->
+  <!-- SECTION 1: HERO (ROOT DEVELOPER + STATS)             -->
   <!-- ==================================================== -->
-  <section class="min-h-screen hero-bg flex flex-col justify-center pt-28 pb-16 px-6 relative">
+  <section class="hero-bg flex flex-col justify-center pt-8 pb-16 px-6 relative">
     
     <div class="max-w-6xl mx-auto w-full space-y-12">
       
       <!-- Top Neon Header -->
       <div class="text-center space-y-2" data-aos="fade-down">
-        <h1 class="text-5xl md:text-6xl font-bold text-teal-400 font-mono tracking-tight glow-header">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-500 font-mono tracking-tight glow-header">
           &lt;Developer /&gt;
         </h1>
-        <div class="w-20 h-1 bg-teal-400 mx-auto rounded-full shadow-[0_0_12px_#14b8a6]"></div>
+        <div class="w-20 h-1 bg-red-500 mx-auto rounded-full shadow-[0_0_14px_#ff003c]"></div>
       </div>
 
       <!-- Main 3-Column Layout -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
         
         <!-- Left: Asymmetric Profile Card -->
         <div class="lg:col-span-4 flex justify-center lg:justify-start" data-aos="fade-right">
-          <div class="w-full max-w-[320px] neon-card profile-card-shape p-7 space-y-6 text-center border-teal-500/30">
+          <div class="w-full max-w-[320px] neon-card profile-card-shape p-7 space-y-6 text-center border-red-500/35">
             
-            <!-- Circular Photo with Glow Ring -->
-            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-teal-400 p-1 shadow-[0_0_25px_rgba(45,212,191,0.4)]">
+            <!-- Circular Photo with Red Glow Ring -->
+            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-red-500 p-1 shadow-[0_0_30px_rgba(255,0,60,0.5)]">
               <img src="profile.jpeg" alt="Ariff Hakimi" class="w-full h-full object-cover rounded-full" />
             </div>
 
             <div>
               <h2 class="text-2xl font-bold text-white tracking-tight">Ariff Hakimi</h2>
-              <p class="text-xs text-teal-400 font-mono mt-1">Full-Stack & Systems</p>
+              <p class="text-xs text-red-400 font-mono mt-1">Full-Stack & Systems Architecture</p>
             </div>
 
-            <div class="space-y-2.5 text-xs text-neutral-400 font-mono border-t border-neutral-800 pt-5 text-left">
+            <div class="space-y-2.5 text-xs text-neutral-400 font-mono border-t border-neutral-800/80 pt-5 text-left">
               <div class="flex items-center gap-3">
-                <span class="text-teal-400">✉</span>
+                <span class="text-red-500">✉</span>
                 <span class="truncate text-neutral-300">ariffhakimiazani@gmail.com</span>
               </div>
               <div class="flex items-center gap-3">
-                <span class="text-teal-400">⚲</span>
+                <span class="text-red-500">⚲</span>
                 <span class="text-neutral-300">Terengganu, Malaysia</span>
               </div>
               <div class="flex items-center gap-3">
-                <span class="text-teal-400">⚡</span>
-                <span class="text-neutral-300">Full-time / Management Trainee</span>
+                <span class="text-red-500">⚡</span>
+                <span class="text-neutral-300">Management Trainee (CEO's Office & Risk)</span>
               </div>
             </div>
 
             <div class="pt-2">
-              <a href="mailto:ariffhakimiazani@gmail.com" class="block w-full py-3 rounded-2xl bg-teal-500/15 border border-teal-500 text-teal-300 text-xs font-mono font-bold tracking-wider uppercase hover:bg-teal-400 hover:text-black transition shadow-[0_0_20px_rgba(20,184,166,0.3)]">
+              <!-- Disabled / Placeholder CV Button -->
+              <button onclick="handleDisabledCV()" type="button" class="cursor-pointer block w-full py-3 rounded-2xl bg-neutral-900 border border-neutral-700 text-neutral-400 text-xs font-mono font-bold tracking-wider uppercase hover:border-red-500 hover:text-red-400 transition">
                 Download CV ⤓
-              </a>
+              </button>
             </div>
 
           </div>
@@ -181,17 +186,20 @@
         <!-- Middle: Bio Intro -->
         <div class="lg:col-span-5 space-y-6" data-aos="fade-up">
           <div class="space-y-2">
-            <span class="text-xs font-mono tracking-widest text-teal-400 uppercase">Hey There</span>
+            <span class="text-xs font-mono tracking-widest text-red-500 uppercase flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              Status: Operational
+            </span>
             <h2 class="text-4xl sm:text-5xl font-extrabold text-white leading-[1.15]">
-              I'm <span class="text-teal-400">Ariff</span>,<br />Full-Stack Developer
+              I'm <span class="text-red-500">Ariff</span>,<br />Full-Stack Developer
             </h2>
           </div>
           <p class="text-base text-neutral-300 leading-relaxed font-light">
-            I help organizations digitize operations by crafting robust web systems, clean relational architectures, and interactive performance dashboards. If you're looking for a developer that gets stuff done, let's talk.
+            I engineer resilient enterprise software, high-throughput database schemas, and digital risk management architectures. Transforming manual bottlenecks into locked-down, high-performance systems.
           </p>
           <div class="pt-2">
-            <a href="mailto:ariffhakimiazani@gmail.com" class="inline-flex items-center gap-2 text-teal-400 font-mono text-sm font-semibold hover:gap-3 transition-all">
-              <span>Let's Talk</span> <span>→</span>
+            <a href="mailto:ariffhakimiazani@gmail.com" class="inline-flex items-center gap-2 text-red-400 font-mono text-sm font-semibold hover:gap-3 transition-all">
+              <span>Execute Discussion</span> <span>→</span>
             </a>
           </div>
         </div>
@@ -200,23 +208,23 @@
         <div class="lg:col-span-3 space-y-4" data-aos="fade-left">
           
           <div class="neon-card rounded-2xl p-5 flex items-center gap-5">
-            <div class="text-3xl font-extrabold text-teal-400 font-mono">6+</div>
+            <div class="text-3xl font-extrabold text-red-500 font-mono">6+</div>
             <div class="text-xs text-neutral-400 leading-snug">
-              Programming<br /><strong class="text-white font-medium">Languages & Stacks</strong>
+              Languages & Core<br /><strong class="text-white font-medium">Framework Stacks</strong>
             </div>
           </div>
 
           <div class="neon-card rounded-2xl p-5 flex items-center gap-5">
-            <div class="text-3xl font-extrabold text-teal-400 font-mono">8+</div>
+            <div class="text-3xl font-extrabold text-red-500 font-mono">8+</div>
             <div class="text-xs text-neutral-400 leading-snug">
-              Systems & Solo<br /><strong class="text-white font-medium">Projects Built</strong>
+              Enterprise & Solo<br /><strong class="text-white font-medium">Platforms Deployed</strong>
             </div>
           </div>
 
           <div class="neon-card rounded-2xl p-5 flex items-center gap-5">
-            <div class="text-3xl font-extrabold text-teal-400 font-mono">5+</div>
+            <div class="text-3xl font-extrabold text-red-500 font-mono">3+</div>
             <div class="text-xs text-neutral-400 leading-snug">
-              Years Coding &<br /><strong class="text-white font-medium">Enterprise Experience</strong>
+              Years Engineering &<br /><strong class="text-white font-medium">Corporate Governance</strong>
             </div>
           </div>
 
@@ -228,7 +236,7 @@
 
   </section>
 
-  <!-- Circuit Connector -->
+  <!-- Laser Circuit Connector -->
   <div class="circuit-node">
     <div class="circuit-dot"></div>
     <div class="circuit-line"></div>
@@ -236,7 +244,7 @@
 
 
   <!-- ==================================================== -->
-  <!-- SECTION 2: ABOUT ME (TOPOGRAPHIC BANNER BACKDROP)    -->
+  <!-- SECTION 2: ABOUT ME (THREAT RADAR CONTOUR)           -->
   <!-- ==================================================== -->
   <section id="about" class="w-full topo-bg py-24 px-6 relative">
     
@@ -244,7 +252,7 @@
       
       <!-- Section Title Badge -->
       <div class="text-center" data-aos="zoom-in">
-        <span class="inline-block px-7 py-2 rounded-full border-2 border-teal-400/50 bg-[#141c22] text-teal-300 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(20,184,166,0.25)]">
+        <span class="inline-block px-7 py-2 rounded-full border-2 border-red-500/50 bg-[#160a0d] text-red-400 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(255,0,60,0.25)]">
           About Me
         </span>
       </div>
@@ -253,25 +261,25 @@
         
         <!-- About Box -->
         <div class="md:col-span-7 neon-card rounded-3xl p-8 md:p-10 space-y-4" data-aos="fade-right">
-          <h3 class="text-teal-400 font-mono text-base font-bold">Hello!</h3>
+          <h3 class="text-red-400 font-mono text-base font-bold">Hello World.</h3>
           <p class="text-sm md:text-base text-neutral-200 leading-relaxed font-light">
-            My name is <strong class="text-white font-semibold">Ariff Hakimi</strong>. I specialize in full-stack system development and enterprise automation utilizing <strong class="text-teal-300 font-medium">Laravel, React, TypeScript, PHP, MySQL, and Power Platform</strong>.
+            My name is <strong class="text-white font-semibold">Ariff Hakimi</strong>. I build scalable full-stack web applications and low-code operational ecosystems specializing in <strong class="text-red-400 font-medium">Laravel, React, TypeScript, PHP, MySQL, and Power Platform</strong>.
           </p>
           <p class="text-sm md:text-base text-neutral-300 leading-relaxed font-light">
-            I hold a Bachelor's Degree in Computer Science (Graphics & Multimedia Technology) from Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA). Currently, I serve as a <strong class="text-white">Management Trainee</strong> attached to the <strong class="text-white">CEO's Office & Risk Management Unit</strong> at Golden Pharos Berhad.
+            A Computer Science graduate (Graphics & Multimedia Technology) from Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA). Currently stationed as a <strong class="text-white">Management Trainee</strong> in the <strong class="text-white">CEO's Office & Risk Management Unit</strong> at Golden Pharos Berhad.
           </p>
           <p class="text-sm md:text-base text-neutral-400 leading-relaxed font-light">
-            I am driven by writing concise, scalable code that solves actual operational bottlenecks—transforming cumbersome manual processes into centralized digital products.
+            My focus centers on precision: architecting tamper-resistant audit logs, automating approval protocols, and designing intelligence platforms that eradicate operational redundancies.
           </p>
         </div>
 
-        <!-- Desk / Coding Image -->
+        <!-- Desk / Image -->
         <div class="md:col-span-5 flex justify-center" data-aos="fade-left">
-          <div class="w-full max-w-[400px] aspect-[4/3] rounded-3xl overflow-hidden neon-card border-2 border-teal-500/30 p-1.5 shadow-2xl">
+          <div class="w-full max-w-[400px] aspect-[4/3] rounded-3xl overflow-hidden neon-card border-2 border-red-500/40 p-1.5 shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80" 
-              alt="Developer Workspace" 
-              class="w-full h-full object-cover rounded-[22px] grayscale contrast-125 opacity-90"
+              alt="Developer Terminal" 
+              class="w-full h-full object-cover rounded-[22px] grayscale contrast-125 opacity-80"
             />
           </div>
         </div>
@@ -282,7 +290,7 @@
 
   </section>
 
-  <!-- Circuit Connector -->
+  <!-- Laser Circuit Connector -->
   <div class="circuit-node">
     <div class="circuit-dot"></div>
     <div class="circuit-line"></div>
@@ -290,83 +298,83 @@
 
 
   <!-- ==================================================== -->
-  <!-- SECTION 3: SKILLS (CODE MATRIX GHOST BACKDROP)       -->
+  <!-- SECTION 3: SKILLS (ORIGINAL BRAND COLORS)            -->
   <!-- ==================================================== -->
   <section id="skills" class="w-full code-bg py-24 px-6 text-center">
     
     <div class="max-w-5xl mx-auto space-y-12">
       
       <div class="space-y-3" data-aos="zoom-in">
-        <span class="inline-block px-7 py-2 rounded-full border-2 border-teal-400/50 bg-[#141c22] text-teal-300 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(20,184,166,0.25)]">
+        <span class="inline-block px-7 py-2 rounded-full border-2 border-red-500/50 bg-[#160a0d] text-red-400 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(255,0,60,0.25)]">
           Skills
         </span>
-        <p class="text-xs md:text-sm text-neutral-400 font-mono">I am striving to never stop learning and improving.</p>
+        <p class="text-xs md:text-sm text-neutral-400 font-mono">Continuous deployment. Relentless optimization.</p>
       </div>
 
       <!-- 2 Major Category Badges -->
       <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up">
         
         <div class="neon-card rounded-2xl px-8 py-5 text-center min-w-[280px]">
-          <div class="text-sm font-mono font-bold text-teal-400">Web & System Development</div>
+          <div class="text-sm font-mono font-bold text-red-400">Full-Stack & Systems</div>
           <div class="text-xs text-neutral-300 font-mono mt-1">Laravel • React • Vue • MySQL • TypeScript</div>
         </div>
 
         <div class="neon-card rounded-2xl px-8 py-5 text-center min-w-[280px]">
-          <div class="text-sm font-mono font-bold text-teal-400">Enterprise BI & Low-Code</div>
-          <div class="text-xs text-neutral-300 font-mono mt-1">Power Apps • Power BI (DAX) • Automate • SharePoint</div>
+          <div class="text-sm font-mono font-bold text-red-400">Governance & Intelligence</div>
+          <div class="text-xs text-neutral-300 font-mono mt-1">Power Apps • Power BI (DAX) • Power Automate • SharePoint</div>
         </div>
 
       </div>
 
-      <!-- Big Colored Tech Badges Row (Sinan-style circle icons) -->
+      <!-- Original Tech Brand Colored Icons Row -->
       <div class="flex flex-wrap justify-center items-center gap-8 pt-6" data-aos="fade-up" data-aos-delay="150">
         
-        <!-- Laravel -->
+        <!-- Laravel: Red -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#ff2d20]/15 border-2 border-[#ff2d20]/50 flex items-center justify-center text-[#ff2d20] font-mono font-bold text-lg shadow-[0_0_20px_rgba(255,45,32,0.25)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#ff2d20]/20 border-2 border-[#ff2d20] flex items-center justify-center text-[#ff2d20] font-mono font-bold text-lg shadow-[0_0_25px_rgba(255,45,32,0.4)] group-hover:scale-110 transition">
             LV
           </div>
-          <span class="text-xs font-mono text-neutral-400">Laravel</span>
+          <span class="text-xs font-mono text-neutral-300">Laravel</span>
         </div>
 
-        <!-- React -->
+        <!-- React: Cyan Blue -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#61dafb]/15 border-2 border-[#61dafb]/50 flex items-center justify-center text-[#61dafb] font-mono font-bold text-lg shadow-[0_0_20px_rgba(97,218,251,0.25)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#61dafb]/20 border-2 border-[#61dafb] flex items-center justify-center text-[#61dafb] font-mono font-bold text-lg shadow-[0_0_25px_rgba(97,218,251,0.4)] group-hover:scale-110 transition">
             RC
           </div>
-          <span class="text-xs font-mono text-neutral-400">React</span>
+          <span class="text-xs font-mono text-neutral-300">React</span>
         </div>
 
-        <!-- TypeScript -->
+        <!-- TypeScript: Deep Blue -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#3178c6]/15 border-2 border-[#3178c6]/50 flex items-center justify-center text-[#3178c6] font-mono font-bold text-lg shadow-[0_0_20px_rgba(49,120,198,0.25)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#3178c6]/20 border-2 border-[#3178c6] flex items-center justify-center text-[#3178c6] font-mono font-bold text-lg shadow-[0_0_25px_rgba(49,120,198,0.4)] group-hover:scale-110 transition">
             TS
           </div>
-          <span class="text-xs font-mono text-neutral-400">TypeScript</span>
+          <span class="text-xs font-mono text-neutral-300">TypeScript</span>
         </div>
 
-        <!-- Power BI -->
+        <!-- Power BI: Golden Yellow -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#f2c811]/15 border-2 border-[#f2c811]/50 flex items-center justify-center text-[#f2c811] font-mono font-bold text-lg shadow-[0_0_20px_rgba(242,200,17,0.25)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#f2c811]/20 border-2 border-[#f2c811] flex items-center justify-center text-[#f2c811] font-mono font-bold text-lg shadow-[0_0_25px_rgba(242,200,17,0.4)] group-hover:scale-110 transition">
             BI
           </div>
-          <span class="text-xs font-mono text-neutral-400">Power BI</span>
+          <span class="text-xs font-mono text-neutral-300">Power BI</span>
         </div>
 
-        <!-- Power Apps -->
+        <!-- Power Apps: Magenta/Purple -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#742774]/20 border-2 border-[#742774]/60 flex items-center justify-center text-[#c85ac8] font-mono font-bold text-lg shadow-[0_0_20px_rgba(116,39,116,0.3)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#742774]/25 border-2 border-[#d946ef] flex items-center justify-center text-[#e879f9] font-mono font-bold text-lg shadow-[0_0_25px_rgba(217,70,239,0.4)] group-hover:scale-110 transition">
             PA
           </div>
-          <span class="text-xs font-mono text-neutral-400">Power Apps</span>
+          <span class="text-xs font-mono text-neutral-300">Power Apps</span>
         </div>
 
-        <!-- MySQL -->
+        <!-- MySQL: Ocean Blue / Orange Accent -->
         <div class="flex flex-col items-center gap-2 group">
-          <div class="w-16 h-16 rounded-full bg-[#00758f]/20 border-2 border-[#00758f]/60 flex items-center justify-center text-[#00a6ca] font-mono font-bold text-lg shadow-[0_0_20px_rgba(0,117,143,0.3)] group-hover:scale-110 transition">
+          <div class="w-16 h-16 rounded-full bg-[#00758f]/25 border-2 border-[#00a6ca] flex items-center justify-center text-[#38bdf8] font-mono font-bold text-lg shadow-[0_0_25px_rgba(0,166,202,0.4)] group-hover:scale-110 transition">
             SQL
           </div>
-          <span class="text-xs font-mono text-neutral-400">MySQL</span>
+          <span class="text-xs font-mono text-neutral-300">MySQL</span>
         </div>
 
       </div>
@@ -375,7 +383,7 @@
 
   </section>
 
-  <!-- Circuit Connector -->
+  <!-- Laser Circuit Connector -->
   <div class="circuit-node">
     <div class="circuit-dot"></div>
     <div class="circuit-line"></div>
@@ -385,16 +393,16 @@
   <!-- ==================================================== -->
   <!-- SECTION 4: WORKS (SOLO TIMELINE IN ORDER)           -->
   <!-- ==================================================== -->
-  <section id="works" class="py-24 px-6 bg-[#0b1114]">
+  <section id="works" class="py-24 px-6 bg-[#070406]">
     
     <div class="max-w-5xl mx-auto space-y-12">
       
       <div class="text-center space-y-3" data-aos="zoom-in">
-        <span class="inline-block px-7 py-2 rounded-full border-2 border-teal-400/50 bg-[#141c22] text-teal-300 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(20,184,166,0.25)]">
-          Solo Works & Timeline
+        <span class="inline-block px-7 py-2 rounded-full border-2 border-red-500/50 bg-[#160a0d] text-red-400 text-sm font-mono font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(255,0,60,0.25)]">
+          Deployment Log & Timeline
         </span>
         <p class="text-xs md:text-sm text-neutral-400 font-mono">
-          Chronological showcase of systems built independently from university to enterprise production.
+          Chronological record of independent builds from university foundation to enterprise release.
         </p>
       </div>
 
@@ -404,17 +412,17 @@
         <div class="neon-card rounded-3xl p-7 flex flex-col justify-between space-y-5" data-aos="fade-up">
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
-              <span class="text-teal-400 bg-teal-950/70 border border-teal-700/60 px-3 py-1 rounded-full font-bold">
+              <span class="text-red-400 bg-red-950/80 border border-red-600/70 px-3 py-1 rounded-full font-bold shadow-[0_0_10px_rgba(255,0,60,0.3)]">
                 Latest • 2026
               </span>
-              <span class="text-neutral-500">Risk Platform</span>
+              <span class="text-neutral-500 font-mono">Risk Engine</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">E-RCSA (Risk & Control Self-Assessment)</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Corporate risk evaluation platform featuring dynamic matrices, automated scoring algorithms, and a decoupled API backend.
+              Enterprise threat and risk calculation system featuring dynamic risk matrix scoring, audit workflows, and decoupled API communication.
             </p>
           </div>
-          <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-teal-300">
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-red-300">
             <span>Laravel API</span> • <span>React</span> • <span>TypeScript</span> • <span>Tailwind</span> • <span>MySQL</span>
           </div>
         </div>
@@ -424,13 +432,13 @@
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
               <span class="text-neutral-400 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
-                Group Hub
+                Group Repository
               </span>
               <span class="text-neutral-500">2026</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">SOPNexus Hub</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Centralized Standard Operating Procedure portal standardizing compliance documents for Golden Pharos Berhad and subsidiaries.
+              Centralized Standard Operating Procedure portal standardizing operational governance across Golden Pharos Berhad and subsidiaries.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -443,13 +451,13 @@
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
               <span class="text-neutral-400 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
-                Finance & Admin
+                Finance Automation
               </span>
               <span class="text-neutral-500">2026</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">Operational Costing Engine</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Full-stack system for automated financial costing calculations, administrative dashboard, and cloud deployment pipelines.
+              Financial calculation pipeline with admin panel controls, automated operational formulas, and managed cloud database instances.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -462,13 +470,13 @@
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
               <span class="text-neutral-400 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
-                Subsidiary KPKKT
+                KPKKT Concession
               </span>
               <span class="text-neutral-500">2026</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">E-KUP (Licensing System)</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Digital permit management application streamlining timber operations and concession licensing workflows.
+              Paperless concession permitting system accelerating subsidiary compliance validation and harvest quota management.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -481,13 +489,13 @@
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
               <span class="text-neutral-400 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
-                Executive BI
+                Executive C-Suite
               </span>
               <span class="text-neutral-500">2026</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">CEO KPI Intelligence</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Executive Power BI dashboard built with DAX calculations to track group action plans, subsidiary milestones, and strategic targets.
+              Executive Power BI suite built with complex DAX measures to track group strategic directives, subsidiary outputs, and quarterly targets.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -506,7 +514,7 @@
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">HOD Performance Portal</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Departmental action plan submission interface replacing spreadsheet tracking with automated notifications and BI reporting.
+              Automated submission portal replacing disconnected Excel logs with central SharePoint database sync and real-time Power BI reporting.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -519,13 +527,13 @@
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
               <span class="text-neutral-400 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
-                Final Year Project
+                FYP Prototype
               </span>
               <span class="text-neutral-500">UMPSA</span>
             </div>
             <h4 class="text-xl font-bold text-white tracking-tight">ARTI: PC Anatomy</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Augmented Reality Teaching Interface for interactive PC assembly education with 3D component breakdown and real-time interaction.
+              Interactive 3D Augmented Reality interface for educational computer architecture disassembly and component diagnostics.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -537,14 +545,14 @@
         <div class="neon-card rounded-3xl p-7 flex flex-col justify-between space-y-5" data-aos="fade-up" data-aos-delay="350">
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs font-mono">
-              <span class="text-amber-400 bg-amber-950/40 border border-amber-800/40 px-3 py-1 rounded-full">
+              <span class="text-red-400 bg-red-950/60 border border-red-800/50 px-3 py-1 rounded-full">
                 🥈 Silver Medal • FYPro 2022
               </span>
               <span class="text-neutral-500">2022</span>
             </div>
-            <h4 class="text-xl font-bold text-white tracking-tight">MyNota — Note Taking App</h4>
+            <h4 class="text-xl font-bold text-white tracking-tight">MyNota — Android App</h4>
             <p class="text-sm text-neutral-300 leading-relaxed font-light">
-              Mobile note application featuring user authentication and real-time cloud data synchronization. Awarded Silver Medal at Faculty of Computing UMP.
+              Mobile application with real-time Firebase syncing and authentication. Awarded Silver Medal at Faculty of Computing UMP.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-3 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
@@ -562,21 +570,39 @@
   <!-- ==================================================== -->
   <!-- FOOTER                                               -->
   <!-- ==================================================== -->
-  <footer class="py-12 border-t border-neutral-800/80 bg-[#090d10] text-center text-xs font-mono text-neutral-500 space-y-3">
-    <p>© 2026 Ariff Hakimi Azani. Built with Tailwind CSS & Inspired by Sinan Tokmak.</p>
+  <footer class="py-12 border-t border-red-950/60 bg-[#060204] text-center text-xs font-mono text-neutral-500 space-y-3">
+    <p>© 2026 Ariff Hakimi Azani. Systems Online.</p>
     <div>
-      <a href="#" class="text-teal-400 hover:underline">Back to top ↑</a>
+      <a href="#" class="text-red-500 hover:underline">Return to root ↑</a>
     </div>
   </footer>
 
-  <!-- Initialize AOS Animations -->
+  <!-- Toast Notification element for disabled CV -->
+  <div id="cvToast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-neutral-900 border border-red-500/80 text-white text-xs font-mono px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2">
+    <span class="text-red-500 font-bold">ℹ</span>
+    <span>CV is currently being updated. Coming soon!</span>
+  </div>
+
+  <!-- Scripts -->
   <script>
+    // Initialize AOS Animations
     AOS.init({
       duration: 800,
       easing: 'ease-out-cubic',
       once: true,
-      offset: 50
+      offset: 40
     });
+
+    // Disable CV Button action with temporary popup
+    function handleDisabledCV() {
+      const toast = document.getElementById('cvToast');
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
   </script>
 
 </body>
